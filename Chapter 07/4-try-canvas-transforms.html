@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<title>canvas transforms</title>
+<style>
+
+#original {
+	float:left;
+        border: 1px solid black;
+}
+ #transformed {
+	border: 1px solid black;  
+}
+
+</style>
+</head>
+<body>
+  
+<h1>canvas transforms</h1>
+ 
+<canvas id="original" width="300" height="300"></canvas>
+<canvas id="transformed" width="300" height="300"></canvas>
+    		
+<script>
+      window.onload = function() {
+        var origCanvas = document.getElementById("original");
+        var origContext = origCanvas.getContext("2d");	
+		
+        origContext.fillStyle = "red";
+	origContext.fillRect(50,50,200,200);	
+
+        var transCanvas = document.getElementById("transformed");
+        var transContext = transCanvas.getContext("2d");
+		
+       	transContext.fillStyle = "red";
+	transContext.fillRect(50,50,200,200);		
+      };
+    </script>
+  </body>
+</html>

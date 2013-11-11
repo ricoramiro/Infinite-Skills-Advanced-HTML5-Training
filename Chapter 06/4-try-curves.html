@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<title>html5 canvas arcs</title>
+<style>
+#testCanvas {
+	border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<h1> canvas graphics - curves</h1>
+
+<canvas id="testCanvas" width="300" height="300">Your browser does not support the canvas element.</canvas>
+
+<script>
+	window.onload = function() {
+		var canvas = document.getElementById("testCanvas");	
+		var context = canvas.getContext("2d");
+
+		context.beginPath();
+
+		context.strokeStyle = "green"
+		context.lineWidth = 8;
+		context.stroke();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>interacting with HTML elements</title>
+
+</head>
+
+<body>
+
+<h1 id="title">interacting with HTML elements</h1>
+
+<p>The title of this page is: <span id="insertLocation"> </span></p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sem quam, vehicula vitae sagittis eget, ornare id mi. Ut eleifend facilisis quam, in luctus erat laoreet in. Sed nec magna diam, et egestas augue. In fermentum sagittis tellus, interdum scelerisque turpis commodo quis. Curabitur iaculis tempor mollis.
+</p>
+
+<script>
+pageTitle = document.getElementById("title").innerHTML;
+document.getElementById("insertLocation").innerHTML = pageTitle ;
+document.getElementById("insertLocation").style.fontWeight = "bold";
+</script>
+
+</body>
+</html>

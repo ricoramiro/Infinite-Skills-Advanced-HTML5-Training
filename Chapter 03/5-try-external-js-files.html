@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>external js files</title>
+
+</head>
+
+<body>
+
+<h1 id="title">a javascript calculator</h1>
+
+<form name="calc"> 
+<input type="text" name="n1"> + 
+<input type="text" name="n2"> 
+<br/><br/>
+<button type="button" onClick='calculate()'>calculate</button>
+</form>
+<p>
+the answer is: <span id="total"> </span>
+</p>
+
+<script>
+function calculate(){
+	formData = document.forms['calc'];
+	n1 = formData.elements['n1'].value;
+	n1 = Number(n1);
+	n2 = formData.elements['n2'].value;
+	n2 = Number(n2);
+	total = n1 + n2;
+	document.getElementById('total').innerHTML = total;
+}
+</script>
+
+</body>
+</html>

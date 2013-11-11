@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>html5 canvas patterns</title>
+<style>
+#testCanvas {
+	border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<h1> canvas graphics - patterns</h1>
+
+<img id="pattern" src="star.png" width="51" height="50">
+
+<canvas id="testCanvas" width="300" height="300">Your browser does not support the canvas element.</canvas>
+<script>
+	window.onload = function() {
+		var canvas = document.getElementById("testCanvas");	
+		var context = canvas.getContext("2d");
+		
+		var startAng = 0 * Math.PI /180;
+		var endAng = 360 * Math.PI /180;
+
+		context.beginPath();
+		context.arc(150,150,100,startAng,endAng, false);
+
+		context.fillStyle = "green";
+		context.fill();
+	}
+</script>
+</body>
+</html>

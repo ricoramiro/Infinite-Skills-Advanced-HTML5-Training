@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>canvas animation</title>
+<style>
+#animated {
+	border: 1px solid black;  
+}
+</style>
+</head>
+<body>
+  
+<h1>canvas animation</h1>
+ 
+<canvas id="animated" width="500" height="300"></canvas>
+
+<script>
+      	window.requestAnimFrame = (function(callback) {
+        	return window.requestAnimationFrame || 
+        	window.webkitRequestAnimationFrame || 
+        	window.mozRequestAnimationFrame || 
+        	window.oRequestAnimationFrame || 
+        	window.msRequestAnimationFrame ||
+        	function(callback) {
+          		window.setTimeout(callback, 1000 / 60);
+        	};
+     	 })();
+
+      	function animate() {
+        	var canvas = document.getElementById("animated");
+        	var context = canvas.getContext("2d");
+
+        	// clear the canvas
+        	context.clearRect(0, 0, canvas.width, canvas.height);
+
+        	// draw the next frame
+
+        	// request a new frame
+        	requestAnimFrame(function() {
+          		animate();
+        	});
+     	 }
+
+      	window.onload = function() {
+       		animate();
+      	};
+
+</script>
+</body>
+</html>
